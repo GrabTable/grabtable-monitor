@@ -69,7 +69,7 @@ services:
     ports:
       - "3100:3100"
     volumes:
-      - "$PWD/config/loki/loki-config-aws.yml:/etc/loki/loki-config.yml"
+      - "$PWD/config/loki/loki-aws.yml:/etc/loki/loki-config.yml"
     command: -config.file=/etc/loki/loki-config.yml -config.expand-env=true
     depends_on:
       - minio
