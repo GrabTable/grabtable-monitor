@@ -8,7 +8,7 @@ export const options = {
 
 // 가게 리뷰 조회
 export default function () {
-  let res = http.get("http://host.docker.internal:8000/v1/reviews/stores/1");
+  let res = http.get("https://api.grabtable.net/v1/reviews/stores/1");
   check(res, {
     "is status 200": (r) => r.status === 200,
   });
