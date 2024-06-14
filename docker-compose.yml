@@ -85,7 +85,9 @@ services:
         - "8086:8086"
       environment:
         - INFLUXDB_DB=k6
+        - INFLUXDB_ADMIN_USER_PASSWORD
       restart: always
+
 
 
 volumes:
