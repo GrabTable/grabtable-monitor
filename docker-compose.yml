@@ -78,7 +78,7 @@ services:
       - grafana-network
 
   influxdb:
-      image: bitnami/influxdb:latest
+      image: influxdb:1.8
       networks:
         - grafana-network
       ports:
