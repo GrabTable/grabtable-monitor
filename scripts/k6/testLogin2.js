@@ -14,10 +14,10 @@ export const options = {
 		{ duration: "10s", target: 900 },
 		{ duration: "10s", target: 1000 },
 	],
-	tags: { scenario: 'no_redis' }
+	tags: { scenario: 'redis' }
 };
 
-// 로그인 테스트
+// 가게 리스트 조회
 export default function () {
 	let id = Math.floor(Math.random() * 1000).toString();
 	let res = http.get(
