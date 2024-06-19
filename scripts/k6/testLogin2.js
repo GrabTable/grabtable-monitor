@@ -19,9 +19,9 @@ export const options = {
 
 // 가게 리스트 조회
 export default function () {
-	let id = Math.floor(Math.random() * 1000).toString();
+	let id = Math.floor(Math.random() * 100000000).toString();
 	let res = http.get(
-		`https://api.grabtable.net/v1/auth/login/test/${id}`
+		`http://10.0.2.104/v1/auth/login/test/${id}`
 	);
 	check(res, {
 		"is status 200": (r) => r.status === 200,
