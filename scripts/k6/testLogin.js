@@ -19,13 +19,19 @@ export const options = {
 
 // 로그인 테스트
 export default function () {
-	let id = Math.floor(Math.random() * 100000000).toString();
-	let res = http.get(
-		// `https://api.grabtable.net/v1/auth/login/test/${id}`
-		`http://10.0.2.104/v1/auth/login/test/${id}`
+	// let id = Math.floor(Math.random() * 100000000).toString();
+	// let res = http.get(
+	// 	// `https://api.grabtable.net/v1/auth/login/test/${id}`
+	// 	`http://10.0.2.104:8000/v1/auth/login/test/${id}`
 
-	);
+	// );
+	// check(res, {
+	// 	"is status 200": (r) => r.status === 200,
+	// });
+	let res = http.get(`http://10.0.2.104:8000/v1/user/me`)
+
 	check(res, {
 		"is status 200": (r) => r.status === 200,
 	});
+
 }

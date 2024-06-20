@@ -12,7 +12,7 @@
 import { check } from "k6";
 import http from "k6/http";
 
-const BASE_URL = "http://host.docker.internal:8000/v1";
+const BASE_URL = "https://api.grabtable.net/v1";
 export const options = {
 	stages: [
 		{ duration: "10s", target: 100 },

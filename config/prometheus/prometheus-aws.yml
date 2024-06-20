@@ -34,3 +34,9 @@ scrape_configs:
     scrape_interval: 10s
     static_configs:
     - targets: ["api.grabtable.net"]
+
+  - job_name: "test-spring"
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 10s
+    static_configs:
+    - targets: ["10.0.2.104:8000"]
